@@ -12,3 +12,4 @@ git log                                   // 查看提交的日志，最多3次
 git reflog                                //查看历史命令
 git reset --hard HEAD^                    // 回退上一个版本，^^上两个。
           --hard <commit_id>              // 回退这个id的版本
+		  HEAD  <file>                    // 回退到工作区
