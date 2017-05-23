@@ -2,6 +2,7 @@ git config --globle user.name "Your name"   // --globle this paremeter indicates
 git config --globle user.email "your email" //           machine will use this configuration. 
 git init                                    // initialize the directory to git repository
 git add <files> ... <files4>              // 把change add 到版本库的stage（暂存区）  
+git checkout --  <file>                   // 返回最近一次的修改
 git commit -m "message"                   // 把stage 提交到master
 git status                                // 查看状态
 git diff  <file>                          // 对比版本文件
