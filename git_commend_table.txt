@@ -5,8 +5,9 @@ git add <files> ... <files4>              // 把change add 到版本库的stage�
 git commit -m "message"                   // 把stage 提交到master
 git status                                // 查看状态
 git diff  <file>                          // 对比版本文件
+         HEAD -- <file>                   // 对比working area（工作区）和repository(版本库)
 git log                                   // 查看提交的日志，最多3次
           --pretty=oneline                // 每个版本只输出一行
+git reflog                                //查看历史命令
 git reset --hard HEAD^                    // 回退上一个版本，^^上两个。
           --hard <commit_id>              // 回退这个id的版本
-git reflog                                //查看历史命令
