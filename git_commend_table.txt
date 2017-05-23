@@ -1,0 +1,12 @@
+git config --globle user.name "Your name"   // --globle this paremeter indicates that all the git repositories on this 
+git config --globle user.email "your email" //           machine will use this configuration. 
+git init                                    // initialize the directory to git repository
+git add <files> ... <files4>              // 把change add 到版本库的stage（暂存区）  
+git commit -m "message"                   // 把stage 提交到master
+git status                                // 查看状态
+git diff  <file>                          // 对比版本文件
+git log                                   // 查看提交的日志，最多3次
+          --pretty=oneline                // 每个版本只输出一行
+git reset --hard HEAD^                    // 回退上一个版本，^^上两个。
+          --hard <commit_id>              // 回退这个id的版本
+git reflog                                //查看历史命令
