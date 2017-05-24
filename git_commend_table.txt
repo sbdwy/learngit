@@ -1,7 +1,7 @@
 ssh-keygen -t rsa -C "your email"            //建立本地git仓库跟远程github仓库的连接
 git remote add origin git@github.com:account name/repository name .git  
 										//关联远程库与本地库, origin远程库名
-git clone origin ....... .git           //克隆远程库到本地库
+git  origin ....... .git           //克隆远程库到本地库
 git push -u origin master               //推送内容到远程库，并且关联，以后可以不带-u参数
 git config --globle user.name "Your name"   // --globle this paremeter indicates that all the git repositories on this 
 git config --globle user.email "your email" //           machine will use this configuration. 
@@ -9,6 +9,10 @@ git init                                    // initialize the directory to git r
 git add    <files> ... <files4>              // 把change add 到版本库的stage（暂存区）  
 git rm     <file>                           //删除版本库中的文件
 git checkout --  <file>                   // 返回最近一次的修改
+    checkout -b <branch name>              //创建并切换分支,-b --> git branch <branch name>
+git branch                                 //查看分支
+			-d   <branch name>             //delete branch
+git merge    <branch name>                 //合并分支
 git commit -m "message"                   // 把stage 提交到master
 git status                                // 查看状态
 git diff  <file>                          // 对比版本文件
