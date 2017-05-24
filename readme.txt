@@ -4,4 +4,8 @@ git has a mutable index called stage
 git is good
 git tracks changes
 git tracks changes of files
+<<<<<<< HEAD
 creating a new branch is quick & simple
+=======
+creating a new branch is quick AND simple
+>>>>>>> dev
