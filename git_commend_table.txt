@@ -10,6 +10,10 @@ git add    <files> ... <files4>              // 把change add 到版本库的sta
 git rm     <file>                           //删除版本库中的文件
 git checkout --  <file>                   // 返回最近一次的修改
 git checkout -b <branch name>             //创建并切换branch，-b argument 表示创建分支-->git branch <name>
+git barnch                                //查看分支
+            <branch name>                  //创建分支
+			-d <branch name>               // delete branch
+git merge   <branch name>                  //合并分支到当前分支
 git commit -m "message"                   // 把stage 提交到master
 git status                                // 查看状态
 git diff  <file>                          // 对比版本文件
