@@ -14,12 +14,17 @@ git barnch                                //查看分支
             <branch name>                  //创建分支
 			-d <branch name>               // delete branch
 git merge   <branch name>                  //合并分支到当前分支
+    checkout -b <branch name>              //创建并切换分支,-b --> git branch <branch name>
+git branch                                 //查看分支
+			-d   <branch name>             //delete branch
+git merge    <branch name>                 //合并分支
 git commit -m "message"                   // 把stage 提交到master
 git status                                // 查看状态
 git diff  <file>                          // 对比版本文件
           HEAD -- <file>                   // 对比working area（工作区）和repository(版本库)
 git log                                   // 查看提交的日志，最多3次
           --pretty=oneline                // 每个版本只输出一行
+		  --graph  --abbrev-commit        //--graph查看分支合并图,--sbbrev-commit以16进制显示部分对象名字
 git reflog                                //查看历史命令
 git reset --hard HEAD^                    // 回退上一个版本，^^上两个。
           --hard <commit_id>              // 回退这个id的版本
