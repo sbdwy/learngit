@@ -18,6 +18,7 @@ git merge   <branch name>                  //合并分支到当前分支
 git branch                                 //查看分支
 			-d   <branch name>             //delete branch
 git merge    <branch name>                 //合并分支
+			--no-ff							//以普通模式merge
 git commit -m "message"                   // 把stage 提交到master
 git status                                // 查看状态
 git diff  <file>                          // 对比版本文件
