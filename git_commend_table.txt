@@ -30,3 +30,6 @@ git reflog                                //查看历史命令
 git reset --hard HEAD^                    // 回退上一个版本，^^上两个。
           --hard <commit_id>              // 回退这个id的版本
 		  HEAD  <file>                    // 回退到工作区
+git stash								//save 当前working现场
+			pop                         //恢复现场并删除save，相当于-->apply(恢复)+ -->dorp(删除)
+			line						//查看save working
