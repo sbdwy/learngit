@@ -1,9 +1,10 @@
 ssh-keygen -t rsa -C "your email"            //建立本地git仓库跟远程github仓库的连接
-git remote add origin git@github.com:account name/repository name .git  
+git remote									//查看远程库信息,-v 显示更详细。
+			 add origin git@github.com:account name/repository name .git  
 										//关联远程库与本地库, origin远程库名
-git clone  ....... .git           //克隆远程库到本地库
-git push -u origin master               //推送内容到远程库，并且关联，以后可以不带-u参数
-git pull origin master					//从origin update to local
+git clone  ....... .git                //克隆远程库到本地库
+git push -u origin <master/branch>           //推送内容到远程库，并且(-u)关联，以后可以不带-u参数
+git pull  origin  <master/branch>			//从origin 抓取更新
 git config --globle user.name "Your name"   // --globle this paremeter indicates that all the git repositories on this 
 git config --globle user.email "your email" //           machine will use this configuration. 
 git init                                    // initialize the directory to git repository
@@ -11,13 +12,15 @@ git add    <files> ... <files4>              // 把change add 到版本库的sta
 git rm     <file>                           //删除版本库中的文件
 git checkout --  <file>                   // 返回最近一次的修改
 git checkout -b <branch name>             //创建并切换branch，-b argument 表示创建分支-->git branch <name>
+			-b <branch name> 	          //在本地创建与远程分支对应的分支
 git barnch                                //查看分支
             <branch name>                  //创建分支
 			-d <branch name>               // delete branch
 git merge   <branch name>                  //合并分支到当前分支
-    checkout -b <branch name>              //创建并切换分支,-b --> git branch <branch name>
 git branch                                 //查看分支
 			-d   <branch name>             //delete branch
+			-D	 <branch name>             //强制删除
+			--set-upstream <branch name> origin/<branch name> //建立本地创建与远程分支的关联
 git merge    <branch name>                 //合并分支
 			--no-ff							//以普通模式merge
 git commit -m "message"                   // 把stage 提交到master
