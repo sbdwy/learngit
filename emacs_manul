@@ -1,0 +1,42 @@
+		emacs commend search
+-------------------------------------------------------------------
+major mode:				功能：
+	fundamental      基本		默认模式，无特殊行为
+	text	    	 文本		书写文字材料
+	mail	    	 邮件		书写电子邮件消息
+	RMAIL	    	 RMAIL		阅读/组织电子邮件
+	view	    	 只读		查看文件，但不进行编辑
+	shell	    	 命令行		在emacs里运行shell命令行
+	abge-ftp    	 FTP		下载/查看远程系统上的文件
+	telnet	    	 Telnet		登入到远程系统
+	outline	    	 大纲		书写大纲
+	indented text	 缩进文本	自动缩进文本
+	picture	 	 图形		绘制简单的线条图形
+	nroff		 nroff		按nroff的要求对文件进行排版
+	TEX		 TEX		按TEX的要求对文件进行排版
+	LATEX		 LATEX		按LATEX的要求对文件进行排版
+	C		 C		书写C语言程序
+	C++		 C++		书写C++程序
+	FORTRAN		 FORTRAN	书写FORTRAN程序
+	Emacs LISP	 Emacs LISP	书写Emacs LISP函数
+	LISP		 LISP  		书写LISP程序
+	LISP interaction LISP互动	书写/求值LISP表达式
+--------------------------------------------------------------------
+minor mode:				功能：
+      	auto-fill	自动换行		开启整字换行(word wrap)功能
+	overwrite	改写		打字时替换字符,而不是插入
+	auto-save	自动保存		把文件按一定周期自动保存到一个特殊的临时文件里
+	line number	行号		在状态行上显示当前文本行的编号
+	transient	临时标记		对被选取的文本区做高亮反显
+	abbrev		缩略词语		允许使用单词的缩写形式
+	outline		大纲		书写大纲
+	VC		VC		在Emacs下使用各种版本控制系统
+-----------------------------------------------------------------------
+1.光标移动
+    ctrl key
+       C + p 上移	C + f 左移	c + a 行首	
+       C + n 下移	C + b 右移	c + e 行尾
+2.文件操作
+    c+x 字符扩展
+    	i 插入和追加文件	c + s 保存	c + f 打开
+	c + v 修改错误的路径/文件名	
