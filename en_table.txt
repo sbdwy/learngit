@@ -7,4 +7,6 @@ fundamental	 基本		view 			查看,视图		Telnet	        远程登入
 outline		 大纲		indented		缩进			picture		图像
 minor mode	 次/副模式	overwrite		覆盖，改写		auto-fill	自动填入
 transient mark	 临时标记	abbrev			缩写			alternate	可替代的
-completion	 完成			
+completion	 完成		describe-key		按键释义			insert		插入
+manpages 	 手册页	 	terminal		终端			powerful	强大
+enough		 足够		

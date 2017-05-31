@@ -25,18 +25,51 @@ major mode:				功能：
 minor mode:				功能：
       	auto-fill	自动换行		开启整字换行(word wrap)功能
 	overwrite	改写		打字时替换字符,而不是插入
-	auto-save	自动保存		把文件按一定周期自动保存到一个特殊的临时文件里
+	auto-save	自动保存		把文件按一定周期自动保存到一个特殊的临
+					  时文件里
 	line number	行号		在状态行上显示当前文本行的编号
 	transient	临时标记		对被选取的文本区做高亮反显
 	abbrev		缩略词语		允许使用单词的缩写形式
 	outline		大纲		书写大纲
 	VC		VC		在Emacs下使用各种版本控制系统
 -----------------------------------------------------------------------
+键盘操作：		命令名称：		动作:
 1.光标移动
-    ctrl key
-       C + p 上移	C + f 左移	c + a 行首	
-       C + n 下移	C + b 右移	c + e 行尾
+	C-p		previous-line		上移一个字符
+       	C-f 		forward-char		左移一个字符	
+       	C-n 		next-line		下移一个字符
+       	C-b 		backward-char		右移一个字符
+       	C-a					移动到行首
+       	C-e					移动到行尾
+	C-v					下一页
+	M-v					上一页
+	M-f					前移到词首，对于中文
+						是移动到下一个标点符号
+	M-b					后移到词尾，对于中文
+						是移动到上一个标点符号
+	M-a					前移到句首，（对句子的定义：
+						如果句子的结束位置不是文本行
+						的结尾，那么它最后一个标点
+						符号的后面必须要有两个空格）
+	M-e					后移到句尾
+	M-{					后移到段首，对段落的定义：
+						（至少缩进一个空格或两段落之
+						  间要有一个空白行）
+	M-}					前移到段尾
 2.文件操作
-    c+x 字符扩展
-    	i 插入和追加文件	c + s 保存	c + f 打开
-	c + v 修改错误的路径/文件名	
+	C-x i		insert-file		把文件插入到光标的当前位置
+	C-x C-s 	save-buffer		保存	
+	C-x C-f 	find-file		查找并在new buffer里打开这
+	    					个文件
+	C-x C-v 	find-alternate		修改错误的路径/文件名
+	    		-file
+	C-x C-w		write-file		另存为
+      	C-x C-c		save-buffers		退出emacs
+	    		-kill-emacs	
+	C-h 		help-command		进入在线帮助系统	
+      	C-h t		help-with-tutorial	进入快速入门指南	
+	C-h k 		describe-key		<组合键> 此按键的在线帮助
+	C-h f 		describe-function	<命令名> 此命令的在线帮助
+	C-h i		info-goto-emace		启动Info文档阅读器
+	    		-command-node
+	C-g					退出help
