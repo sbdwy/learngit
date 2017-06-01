@@ -126,3 +126,15 @@ minor mode:				功能：
 			-paragraph
 	C-x C-x		exchange-point-and-	交换光标和标记的位置
 	    		mark			(检查标记)
+	C-t		transpose-chars		交换两个字符的位置
+	M-t		transpose-words		交换两个单词的位置
+	C-x C-t		transpose-lines		交换两个文本行的位置
+	(无)		transpose-sentences	交换两个句子的位置
+	(无)		transpose-paragraph	交换两个段落的位置
+	M-c		capitalize-word		把单词首字母改为大写
+	M-u		upcase-word		把单词全都改为大写
+	M-i		downcase-word		把单词全改为小写
+	ESC - M-c	negtive-argument;	把前一个单词的首字母改
+			capitalize-word		为大写
+	ESC - M-u	negtive-argument;	把前一个单词的字母改
+	      		upcase-word		
