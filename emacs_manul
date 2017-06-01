@@ -39,23 +39,38 @@ minor mode:				功能：
        	C-f 		forward-char		左移一个字符	
        	C-n 		next-line		下移一个字符
        	C-b 		backward-char		右移一个字符
-       	C-a					移动到行首
-       	C-e					移动到行尾
-	C-v					下一页
-	M-v					上一页
-	M-f					前移到词首，对于中文
+       	C-a		beginning-of-line	移动到行首
+       	C-e		eng-of-line		移动到行尾
+	C-x [		backward-page		上一页，对页面的定义;
+	    					(分页符是由
+						page-delimiter
+						的变量定义的，如无分页
+						符emacs
+						会把buffer看成一个非常长的
+						页面，这种情况光标会移动到
+						buffer的开头
+	C-x ]		forward-page		下一页
+	C-l 		recenter		重绘屏显把当前行放在屏
+						幕中心
+	C-v		scroll-up		下移一个显屏
+	M-v		scroll-down		上移一个显屏
+	M-f		forward-word		前移到词首，对于中文
 						是移动到下一个标点符号
-	M-b					后移到词尾，对于中文
+	M-b		backward-word		后移到词尾，对于中文
 						是移动到上一个标点符号
-	M-a					前移到句首，（对句子的定义：
+	M-a		backward-sentence	前移到句首，（对句子的定义：
 						如果句子的结束位置不是文本行
 						的结尾，那么它最后一个标点
 						符号的后面必须要有两个空格）
-	M-e					后移到句尾
-	M-{					后移到段首，对段落的定义：
+	M-e		forward-sentence	后移到句尾
+	M-{		backward-paragraph	后移到段首，对段落的定义：
 						（至少缩进一个空格或两段落之
 						  间要有一个空白行）
-	M-}					前移到段尾
+	M-}		forward-paragraph	前移到段尾
+	M-<		beginnig-of-buffer	后移到buffer的开头
+	M->		end-of-buffer		前移到buffer的末尾
+	(无）		goto-line <n>		前进n行
+	(无)		goto-char <n>		前进n个字符
 2.文件操作
 	C-x i		insert-file		把文件插入到光标的当前位置
 	C-x C-s 	save-buffer		保存	
@@ -73,3 +88,41 @@ minor mode:				功能：
 	C-h i		info-goto-emace		启动Info文档阅读器
 	    		-command-node
 	C-g					退出help
+	C-u (n)<命令>	universal-argument	重复n次命令，默认4次，
+						并以4的幂次递增
+	ESC n		digit-argument		重复n次命令
+3.文本编辑
+	M-q		fill-paragraph		重新排版
+	(无)		fill-region		对文本块中的段落进行重
+						排
+	C-q C-l					插入分页符
+	C-@ 		set-mark-command	插入标记
+	M-h		mark-paragraph		自动把标记放到段尾并把
+						光标放到段首
+	C-x h		mark-whole-buffer	把整个buffer标记为一个
+	    					文本块
+	C-x C-p		mark-page		快速标记当前页面
+	C-x u					撤销最近一次的编辑操作
+	C-d 		delete-character	删除光标所处位置上的字
+						符
+	M-d		kill-word		从光标出向前删除单词/
+						对于中文到标点符号
+	M-backspace	backward-kill-word	从光标出向后删除单词/
+						到标点符号
+	C-k		kill-line		从光标处删除到行末(可
+						用C-y恢复)
+	M-k		kill-sentence		删除光标后的句子
+	ESC - C-k				从光标出删除到行首(C-y)
+	C-y   		yank			恢复被删除的东西(粘贴)
+	M-y		yank-pop		恢复最近30(默认)次删除
+						的文本
+	backspace	delete-backward-char	删除光标前面的字符(不
+						可用C-y恢复）
+	C-x backspace	backward-kill-sentence	删除光标前的句子
+	C-w 		kill-region		删除文本块
+	M-w		kill-ring-save		复制文本块
+	(无)		kill-paragraph		删除光标后面的段落
+	(无)		backward-kill		删除光标前面的段落
+			-paragraph
+	C-x C-x		exchange-point-and-	交换光标和标记的位置
+	    		mark			(检查标记)
