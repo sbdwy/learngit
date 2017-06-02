@@ -73,7 +73,7 @@ minor mode:				功能：
 	(无)		goto-char <n>		前进n个字符
 2.文件操作
 	C-x i		insert-file		把文件插入到光标的当前位置
-	C-x C-s 	save-buffer		保存	
+	c-x C-s 	save-buffer		保存	
 	C-x C-f 	find-file		查找并在new buffer里打开这
 	    					个文件
 	C-x C-v 	find-alternate		修改错误的路径/文件名
@@ -84,13 +84,16 @@ minor mode:				功能：
 	C-h 		help-command		进入在线帮助系统	
       	C-h t		help-with-tutorial	进入快速入门指南	
 	C-h k 		describe-key		<组合键> 此按键的在线帮助
-	C-h f 		describe-function	<命令名> 此命令的在线帮助
+	c-h f 		describe-function	<命令名> 此命令的在线帮助
 	C-h i		info-goto-emace		启动Info文档阅读器
 	    		-command-node
-	C-g					退出help
 	C-u (n)<命令>	universal-argument	重复n次命令，默认4次，
 						并以4的幂次递增
 	ESC n		digit-argument		重复n次命令
+	C-x ESC ESC				调出上次执行的命令,
+						M-p上一条目,M-n倒回
+						(对在minibuffer有补充性输
+						入内容的命令有效)
 3.文本编辑
 	M-q		fill-paragraph		重新排版
 	(无)		fill-region		对文本块中的段落进行重
@@ -102,7 +105,10 @@ minor mode:				功能：
 	C-x h		mark-whole-buffer	把整个buffer标记为一个
 	    					文本块
 	C-x C-p		mark-page		快速标记当前页面
-	C-x u					撤销最近一次的编辑操作
+	C-x u		advertised-undo		撤销最近一次的编辑操作
+	(无)		revert-buffer		撤销自上次存盘后的所以修改
+	C-x C-f <filename> C-x C-w <filename>	回到此文件开始这次编辑工作之
+	    		       	   		前的样子 
 	C-d 		delete-character	删除光标所处位置上的字
 						符
 	M-d		kill-word		从光标出向前删除单词/
@@ -136,5 +142,23 @@ minor mode:				功能：
 	M-i		downcase-word		把单词全改为小写
 	ESC - M-c	negtive-argument;	把前一个单词的首字母改
 			capitalize-word		为大写
-	ESC - M-u	negtive-argument;	把前一个单词的字母改
-	      		upcase-word		
+	ESC - M-u	negtive-argument;	把前一个单词的全部字母改
+	      		upcase-word		为大写
+	ESC - M-l	negtive-argument;	把前一个单词的全部字母改
+	      		donwcase-word		为小写
+	C-g		keyboard-quit		取消当前命令
+	(无)		recover-file		从自动保存文件恢复文本
+4.查找和替换
+	C-s		isearch-forward		向前递增查找
+	C-r		isearch-backward	向后递增查找
+	C-g		keyboard-quit		取消命令
+	C-s C-w					把光标位置处的单词用作查找字
+						符串
+	C-s C-y					把光标位置到行尾之间用作查找
+	    					字符串
+	C-s M-y					把删除环中的文本用做查找字符
+	    					串,M-p上一条目，M-n倒回
+	C-s C-s					重复刚才的查找操作
+	(无）		replace-string		向前替换字符串
+	M-%					向前询问是否替换字符串
+	
