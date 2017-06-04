@@ -150,7 +150,8 @@ minor mode:				功能：
 	(无)		recover-file		从自动保存文件恢复文本
 4.查找和替换
 	C-s		isearch-forward		向前递增查找
-	C-r		isearch-backward	向后递增查找
+	C-r		isearch-backward	向后递增查找,可在M-%下
+						进入递归状态
 	C-g		keyboard-quit		取消命令
 	C-s C-w					把光标位置处的单词用作查找字
 						符串
@@ -160,5 +161,30 @@ minor mode:				功能：
 	    					串,M-p上一条目，M-n倒回
 	C-s C-s					重复刚才的查找操作
 	(无）		replace-string		向前替换字符串
-	M-%					向前询问是否替换字符串
-	
+	M-%					开始查询-替换操作，向
+						前询问是否替换字符串
+	C-w					删除此处内容并进入递归
+						编辑
+	ESC C-c					退出递归编辑，继续完成
+	    					查找-替换查找
+	C-]		abort-recursive-edit	退出递归编辑和查询-替
+						换操作
+	ESC C-s<return>	re-search-forward	向前查找一个正则
+	ESC C-r<return>	re-search-backward	向后查找一个正则
+	ESC c-s		iserch-forward-regexp	向前递增查找一个正则
+	ESC c-r		iserch-backward-regexp	向前递增查找一个正则
+	(无)		query-replace-regexp	查询-替换一个正则
+	(无)		replace-regexp		无条件地对一个正则做全
+						局替换
+----------------------------------------------------------------------
+;;abbrev-mode 
+			abbrev-mode		进入/退出简写模式
+	C-x aig		add-inverse-global	添加全局单词简写
+	    ail		add-inverse-		添加局部单词简写
+	    		list-abbrevs	
+			edit-abbrevs
+			write-abbrev-file
+			kill-all-abbrevs	本次禁用简写词汇
+						简写规则(104页)
+			unexpand-abbrev		撤销最近一个简写词
+-----------------------------------------------------------------------
