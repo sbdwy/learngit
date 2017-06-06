@@ -93,12 +93,21 @@ minor mode:				功能：
 	C-x 3		split-window-horitontally
 	    		delete-windows-on	删除某个给定buffer上的
 						所有窗口
+	C-x 5 o		other-frame
+	C-x 5 0		delete-frame
+	C-x 5 1		delete-other-frame
+	C-x 5 2		make-frame
+	C-x 5 r		find-file-read-only-other-frame
+	C-x 5 f		find-file-other-frame
+	C-x 5 b		swicth-to-buffer-other-frame
 	C-x C-b					buffer清单
 	C-x C-f 	find-file		查找并在new buffer里打开这
 	    					个文件
 	C-x C-v 	find-alternate		修改错误的路径/文件名
 	    		-file
 	C-x C-w		write-file		另存为
+	C-z 					挂起emacs，fg或exit回
+						到emacs
       	C-x C-c		save-buffers		退出emacs
 	    		-kill-emacs	
 	C-h 		help-command		进入在线帮助系统	
@@ -115,6 +124,17 @@ minor mode:				功能：
 						(对在minibuffer有补充性输
 						入内容的命令有效)
 3.文本编辑
+	C-x r m		bookmark-set		
+	C-x r b		bookmark-jump		移动
+	      		bookmark-rename		
+			bookmark-delete		
+	C-x r l		bookmark-manu-list		
+	      		bookmark-insert		把书签文件中的文本插入
+						到光标位置
+			bookmark-write		输入用来保存书签的新文
+						件名
+			bookmark-save
+			bookmark-load		加载其他书签文件
 	M-q		fill-paragraph		重新排版
 	(无)		fill-region		对文本块中的段落进行重
 						排
@@ -208,3 +228,5 @@ minor mode:				功能：
 						简写规则(104页)
 			unexpand-abbrev		撤销最近一个简写词
 -----------------------------------------------------------------------
+;;the work environment
+      C-c C-c comint-interrupt-supjob
