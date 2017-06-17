@@ -1,0 +1,232 @@
+		emacs commend search
+-------------------------------------------------------------------
+major mode:				功能：
+	fundamental      基本		默认模式，无特殊行为
+	text	    	 文本		书写文字材料
+	mail	    	 邮件		书写电子邮件消息
+	RMAIL	    	 RMAIL		阅读/组织电子邮件
+	view	    	 只读		查看文件，但不进行编辑
+	shell	    	 命令行		在emacs里运行shell命令行
+	abge-ftp    	 FTP		下载/查看远程系统上的文件
+	telnet	    	 Telnet		登入到远程系统
+	outline	    	 大纲		书写大纲
+	indented text	 缩进文本	自动缩进文本
+	picture	 	 图形		绘制简单的线条图形
+	nroff		 nroff		按nroff的要求对文件进行排版
+	TEX		 TEX		按TEX的要求对文件进行排版
+	LATEX		 LATEX		按LATEX的要求对文件进行排版
+	C		 C		书写C语言程序
+	C++		 C++		书写C++程序
+	FORTRAN		 FORTRAN	书写FORTRAN程序
+	Emacs LISP	 Emacs LISP	书写Emacs LISP函数
+	LISP		 LISP  		书写LISP程序
+	LISP interaction LISP互动	书写/求值LISP表达式
+--------------------------------------------------------------------
+minor mode:				功能：
+      	auto-fill	自动换行		开启整字换行(word wrap)功能
+	overwrite	改写		打字时替换字符,而不是插入
+	auto-save	自动保存		把文件按一定周期自动保存到一个特殊的临
+					  时文件里
+	line number	行号		在状态行上显示当前文本行的编号
+	transient	临时标记		对被选取的文本区做高亮反显
+	abbrev		缩略词语		允许使用单词的缩写形式
+	outline		大纲		书写大纲
+	VC		VC		在Emacs下使用各种版本控制系统
+-----------------------------------------------------------------------
+键盘操作：		命令名称：		动作:
+1.光标移动
+	C-p		previous-line		上移一个字符
+       	C-f 		forward-char		左移一个字符	
+       	C-n 		next-line		下移一个字符
+       	C-b 		backward-char		右移一个字符
+       	C-a		beginning-of-line	移动到行首
+       	C-e		eng-of-line		移动到行尾
+	C-x [		backward-page		上一页，对页面的定义;
+	    					(分页符是由
+						page-delimiter
+						的变量定义的，如无分页
+						符emacs
+						会把buffer看成一个非常长的
+						页面，这种情况光标会移动到
+						buffer的开头
+	C-x ]		forward-page		下一页
+	C-l 		recenter		重绘屏显把当前行放在屏
+						幕中心
+	C-v		scroll-up		下移一个显屏
+	M-v		scroll-down		上移一个显屏
+	M-f		forward-word		前移到词首，对于中文
+						是移动到下一个标点符号
+	M-b		backward-word		后移到词尾，对于中文
+						是移动到上一个标点符号
+	M-a		backward-sentence	前移到句首，（对句子的定义：
+						如果句子的结束位置不是文本行
+						的结尾，那么它最后一个标点
+						符号的后面必须要有两个空格）
+	M-e		forward-sentence	后移到句尾
+	M-{		backward-paragraph	后移到段首，对段落的定义：
+						（至少缩进一个空格或两段落之
+						  间要有一个空白行）
+	M-}		forward-paragraph	前移到段尾
+	M-<		beginnig-of-buffer	后移到buffer的开头
+	M->		end-of-buffer		前移到buffer的末尾
+	(无）		goto-line <n>		前进n行
+	(无)		goto-char <n>		前进n个字符
+2.文件操作
+	C-x i		insert-file		把文件插入到光标的当前位置
+	c-x C-s 	save-buffer		保存	
+	C-x s		save-some-buffers	
+	C-x k		kill-buffer		
+	    		kill-some-buffers
+			rename-buffer		重新命名编译缓冲区
+	C-x C-q					切换只读buffer的属性
+	C-x <		scroll-left		当前显示的文本向左推
+	C-x >		scroll-right		当前显示的文本向右推
+	C-x ^		enlarge-window		向上加宽
+	    		shrink-window		向下收缩
+	C-x {		shrink-window
+	    		-horizontall		向右
+	C-x }		enlarge-window-
+	    		horizontll		向左
+	C-x 0		delete-window
+	C-x 1		delete-other-windows
+	C-x 2		spilt-window-vertically
+	C-x 3		split-window-horitontally
+	    		delete-windows-on	删除某个给定buffer上的
+						所有窗口
+	C-x 5 o		other-frame
+	C-x 5 0		delete-frame
+	C-x 5 1		delete-other-frame
+	C-x 5 2		make-frame
+	C-x 5 r		find-file-read-only-other-frame
+	C-x 5 f		find-file-other-frame
+	C-x 5 b		swicth-to-buffer-other-frame
+	C-x C-b					buffer清单
+	C-x C-f 	find-file		查找并在new buffer里打开这
+	    					个文件
+	C-x C-v 	find-alternate		修改错误的路径/文件名
+	    		-file
+	C-x C-w		write-file		另存为
+	C-z 					挂起emacs，fg或exit回
+						到emacs
+      	C-x C-c		save-buffers		退出emacs
+	    		-kill-emacs	
+	C-h 		help-command		进入在线帮助系统	
+      	C-h t		help-with-tutorial	进入快速入门指南	
+	C-h k 		describe-key		<组合键> 此按键的在线帮助
+	c-h f 		describe-function	<命令名> 此命令的在线帮助
+	C-h i		info-goto-emace		启动Info文档阅读器
+	    		-command-node
+	C-u (n)<命令>	universal-argument	重复n次命令，默认4次，
+						并以4的幂次递增
+	ESC n		digit-argument		重复n次命令
+	C-x ESC ESC				调出上次执行的命令,
+						M-p上一条目,M-n倒回
+						(对在minibuffer有补充性输
+						入内容的命令有效)
+3.文本编辑
+	C-x r m		bookmark-set		
+	C-x r b		bookmark-jump		移动
+	      		bookmark-rename		
+			bookmark-delete		
+	C-x r l		bookmark-manu-list		
+	      		bookmark-insert		把书签文件中的文本插入
+						到光标位置
+			bookmark-write		输入用来保存书签的新文
+						件名
+			bookmark-save
+			bookmark-load		加载其他书签文件
+	M-q		fill-paragraph		重新排版
+	(无)		fill-region		对文本块中的段落进行重
+						排
+	C-q C-l					插入分页符
+	C-@ 		set-mark-command	插入标记
+	M-h		mark-paragraph		自动把标记放到段尾并把
+						光标放到段首
+	C-x h		mark-whole-buffer	把整个buffer标记为一个
+	    					文本块
+	C-x C-p		mark-page		快速标记当前页面
+	C-x u		advertised-undo		撤销最近一次的编辑操作
+	(无)		revert-buffer		撤销自上次存盘后的所以修改
+	C-x C-f <filename> C-x C-w <filename>	回到此文件开始这次编辑工作之
+	    		       	   		前的样子 
+	C-d 		delete-character	删除光标所处位置上的字
+						符
+	M-d		kill-word		从光标出向前删除单词/
+						对于中文到标点符号
+	M-backspace	backward-kill-word	从光标出向后删除单词/
+						到标点符号
+	C-k		kill-line		从光标处删除到行末(可
+						用C-y恢复)
+	M-k		kill-sentence		删除光标后的句子
+	ESC - C-k				从光标出删除到行首(C-y)
+	C-y   		yank			恢复被删除的东西(粘贴)
+	M-y		yank-pop		恢复最近30(默认)次删除
+						的文本
+	backspace	delete-backward-char	删除光标前面的字符(不
+						可用C-y恢复）
+	C-x backspace	backward-kill-sentence	删除光标前的句子
+	C-w 		kill-region		删除文本块
+	M-w		kill-ring-save		复制文本块
+	(无)		kill-paragraph		删除光标后面的段落
+	(无)		backward-kill		删除光标前面的段落
+			-paragraph
+	C-x C-x		exchange-point-and-	交换光标和标记的位置
+	    		mark			(检查标记)
+	C-t		transpose-chars		交换两个字符的位置
+	M-t		transpose-words		交换两个单词的位置
+	C-x C-t		transpose-lines		交换两个文本行的位置
+	(无)		transpose-sentences	交换两个句子的位置
+	(无)		transpose-paragraph	交换两个段落的位置
+	M-c		capitalize-word		把单词首字母改为大写
+	M-u		upcase-word		把单词全都改为大写
+	M-i		downcase-word		把单词全改为小写
+	ESC - M-c	negtive-argument;	把前一个单词的首字母改
+			capitalize-word		为大写
+	ESC - M-u	negtive-argument;	把前一个单词的全部字母改
+	      		upcase-word		为大写
+	ESC - M-l	negtive-argument;	把前一个单词的全部字母改
+	      		donwcase-word		为小写
+	C-g		keyboard-quit		取消当前命令
+	(无)		recover-file		从自动保存文件恢复文本
+4.查找和替换
+	C-s		isearch-forward		向前递增查找
+	C-r		isearch-backward	向后递增查找,可在M-%下
+						进入递归状态
+	C-g		keyboard-quit		取消命令
+	C-s C-w					把光标位置处的单词用作查找字
+						符串
+	C-s C-y					把光标位置到行尾之间用作查找
+	    					字符串
+	C-s M-y					把删除环中的文本用做查找字符
+	    					串,M-p上一条目，M-n倒回
+	C-s C-s					重复刚才的查找操作
+	(无）		replace-string		向前替换字符串
+	M-%					开始查询-替换操作，向
+						前询问是否替换字符串
+	C-w					删除此处内容并进入递归
+						编辑
+	ESC C-c					退出递归编辑，继续完成
+	    					查找-替换查找
+	C-]		abort-recursive-edit	退出递归编辑和查询-替
+						换操作
+	ESC C-s<return>	re-search-forward	向前查找一个正则
+	ESC C-r<return>	re-search-backward	向后查找一个正则
+	ESC c-s		iserch-forward-regexp	向前递增查找一个正则
+	ESC c-r		iserch-backward-regexp	向前递增查找一个正则
+	(无)		query-replace-regexp	查询-替换一个正则
+	(无)		replace-regexp		无条件地对一个正则做全
+						局替换
+----------------------------------------------------------------------
+;;abbrev-mode 
+			abbrev-mode		进入/退出简写模式
+	C-x aig		add-inverse-global	添加全局单词简写
+	    ail		add-inverse-		添加局部单词简写
+	    		list-abbrevs	
+			edit-abbrevs
+			write-abbrev-file
+			kill-all-abbrevs	本次禁用简写词汇
+						简写规则(104页)
+			unexpand-abbrev		撤销最近一个简写词
+-----------------------------------------------------------------------
+;;the work environment
+      C-c C-c comint-interrupt-supjob

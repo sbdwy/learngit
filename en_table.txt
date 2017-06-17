@@ -1,0 +1,10 @@
+	English word table
+-------------------------------------------------------------------------------------------------------
+markup language 标记语言 file transfer protocol FTP文件传输协议 edit 编
+辑 mactos 宏命令 compatibility 兼容性 next-line 下一行find 查找 word
+wrap 自动换行 major mode 主模式fundamental 基本 view 查看,视图 Telnet
+远程登入outline 大纲 indented 缩进 picture 图像minor mode 次/副模式
+overwrite 覆盖，改写 auto-fill 自动填入transient mark 临时标记 abbrev
+缩写 alternate 可替代的completion 完成 describe-key 按键释义 insert 插
+入manpages 手册页 terminal 终端 powerful 强大enough 足够 region 文本块
+mark 标记exchange 交换

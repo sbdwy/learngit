@@ -1,0 +1,39 @@
+ssh-keygen -t rsa -C "your email"            //建立本地git仓库跟远程github仓库的连接
+git remote									//查看远程库信息,-v 显示更详细。
+			 add origin git@github.com:account name/repository name .git  
+										//关联远程库与本地库, origin远程库名
+git clone  ....... .git                //克隆远程库到本地库
+git push -u origin <master/branch>           //推送内容到远程库，并且(-u)关联，以后可以不带-u参数
+git pull  origin  <master/branch>			//从origin 抓取更新
+git config --globle user.name "Your name"   // --globle this paremeter indicates that all the git repositories on this 
+git config --globle user.email "your email" //           machine will use this configuration. 
+git init                                    // initialize the directory to git repository
+git add    <files> ... <files4>              // 把change add 到版本库的stage（暂存区）  
+git rm     <file>                           //删除版本库中的文件
+git checkout --  <file>                   // 返回最近一次的修改
+git checkout -b <branch name>             //创建并切换branch，-b argument 表示创建分支-->git branch <name>
+			-b <branch name> 	          //在本地创建与远程分支对应的分支
+git barnch                                //查看分支
+            <branch name>                  //创建分支
+			-d <branch name>               // delete branch
+git merge   <branch name>                  //合并分支到当前分支
+git branch                                 //查看分支
+			-d   <branch name>             //delete branch
+			-D	 <branch name>             //强制删除
+			--set-upstream <branch name> origin/<branch name> //建立本地创建与远程分支的关联
+git merge    <branch name>                 //合并分支
+			--no-ff							//以普通模式merge
+git commit -m "message"                   // 把stage 提交到master
+git status                                // 查看状态
+git diff  <file>                          // 对比版本文件
+          HEAD -- <file>                   // 对比working area（工作区）和repository(版本库)
+git log                                   // 查看提交的日志，最多3次
+          --pretty=oneline                // 每个版本只输出一行
+		  --graph  --abbrev-commit        //--graph查看分支合并图,--sbbrev-commit以16进制显示部分对象名字
+git reflog                                //查看历史命令
+git reset --hard HEAD^                    // 回退上一个版本，^^上两个。
+          --hard <commit_id>              // 回退这个id的版本
+		  HEAD  <file>                    // 回退到工作区
+git stash								//save 当前working现场
+			pop                         //恢复现场并删除save，相当于-->apply(恢复)+ -->dorp(删除)
+			list						//查看save working
