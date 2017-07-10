@@ -1,5 +1,0 @@
-
-#+BEGIN_SRC emacs-lisp
-  (setq make-blackup-files nil)
-  (setq make-backup-file-name-function)
-#+END_SRC
